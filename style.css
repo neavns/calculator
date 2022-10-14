@@ -1,0 +1,78 @@
+:root {
+  --btn-height: 100px;
+  --btn-width: 100px;
+  --gap: 20px;
+  --default-color: #313131;
+  --operator-color: #f69a05;
+  --secondary-color: #a0a0a0
+}
+
+#calculator {
+  background: #000;
+  width: calc(var(--btn-width) * 4 + var(--gap) * 3);
+  padding: var(--gap);
+  margin: auto;
+  border-radius: 10px;
+  font-family: "Helvetica Neue";
+}
+
+#display {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+/* #display-top {
+  color: #9a9a9a;
+} */
+
+#display-bottom {
+  font-size: 5em;
+  padding-top: 10rem;
+  padding-bottom: 0.2rem;
+  font-weight: 100;
+}
+
+.row {
+  display: flex;
+  gap: var(--gap);
+  margin: var(--gap) 0;
+}
+
+.btn {
+  all: unset;
+  width: var(--btn-width);
+  height: var(--btn-height);
+  background: var(--default-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.btn-operation {
+  background: var(--operator-color);
+}
+
+.btn-secondary {
+  background: var(--secondary-color)
+}
+
+
+#zero {
+  width: calc(var(--btn-width) * 2 + var(--gap));
+  border-radius: 50px;
+}
+
+.active {
+  color: var(--operator-color);
+  background: white;
+}
